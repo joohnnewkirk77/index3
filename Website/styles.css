@@ -1,0 +1,276 @@
+/* RESET Y BASE */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ebe4da;
+  color: #1f3e2d;
+  text-align: center;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background-color: #203e2d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("Assets/Logo-charoyjohn.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* FECHA + "NOS CASAMOS" */
+.fecha-anuncio {
+  padding: 4rem 1rem 2rem;
+  background-color: #ebe4da;
+}
+
+.fecha {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
+.nos-casamos-img {
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 0 1rem;
+}
+
+.nos-casamos-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* COUNTDOWN */
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-item span {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  color: #b9934d;
+  line-height: 1;
+}
+
+.countdown-item small {
+  font-size: 0.9rem;
+  color: #203e2d;
+  margin-top: 0.3rem;
+  letter-spacing: 0.5px;
+}
+
+.countdown-separator {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  color: #b9934d;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* IMAGEN ENTRE SECCIONES */
+.imagen-entre-secciones {
+  background: linear-gradient(to bottom, #ebe4da 50%, #203e2d 50%);
+  padding: 0;
+  margin: 0;
+}
+
+.imagen-entre-secciones img {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  height: auto;
+}
+
+/* INVITACIÓN SOBRE FONDO VERDE */
+.invitacion-verde {
+  background-color: #203e2d;
+  color: white;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.invitacion-arriba {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem; /* aumentado */
+  margin-bottom: 1rem;
+}
+
+.venis {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 9vw, 6rem); /* más grande */
+  color: #b9934d;
+  margin: 1rem 0;
+}
+
+.invitacion-abajo {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem; /* más grande */
+  margin-top: 1rem;
+}
+
+.btn-rsvp-alt {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1.2rem 3rem;
+  background-color: #b9934d;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem; /* más visible */
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-rsvp-alt:hover {
+  background-color: #a07c3e;
+}
+
+/* DETALLES */
+.detalles {
+  background-color: #f4ede3;
+  padding: 4rem 1rem;
+}
+
+.detalles h2 {
+  color: #1f3e2d;
+}
+
+.eventos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.eventos div {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 150px;
+}
+
+/* REGALOS Y EXTRAS */
+.regalos,
+.extras {
+  padding: 4rem 1rem;
+  background-color: #ebe4da;
+}
+
+.regalos h2,
+.extras h3 {
+  color: #1f3e2d;
+}
+
+.btn,
+.btn-outline {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn {
+  background: #b9934d;
+  color: white;
+}
+
+.btn-outline {
+  border: 2px solid #1f3e2d;
+  color: #1f3e2d;
+}
+
+/* FOOTER */
+footer {
+  background-color: #203e2d;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+.logo-footer {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}
+
+.logo-footer span {
+  color: #b9934d;
+}
+
+/* COLORES UTILES */
+.dorado {
+  color: #b9934d;
+}
+
+.verde {
+  color: #203e2d;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.countdown-set {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-set .number {
+  font-size: 2.8rem;
+  font-family: 'Playfair Display', serif;
+  color: #b9934d;
+  line-height: 1;
+}
+
+.countdown-set .label {
+  font-size: 0.9rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #203e2d;
+  margin-top: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.countdown-colon {
+  font-size: 2.8rem;
+  font-family: 'Playfair Display', serif;
+  color: #b9934d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  margin-top: 0.2rem; /* ajuste vertical fino si querés */
+}
