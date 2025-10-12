@@ -2,112 +2,202 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Charo & John - ¡Nos Casamos!</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charo & John — ¡Nos Casamos!</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css"/>
 </head>
-<body style="background-color: #ebe4da">
+<body>
 
-  <!-- HERO CON LOGO -->
-  <header class="hero">
-    <div class="hero-img"></div>
-  </header>
-
-  <!-- FECHA + NOS CASAMOS + COUNTDOWN -->
-  <section class="fecha-anuncio">
-    <p class="fecha">
-      El <span class="dorado">25</span> de <span class="dorado">abril</span> de <span class="dorado">2026</span>
-      <span class="verde">a las</span> <span class="dorado">15 hs.</span>
-    </p>
-
-    <div class="nos-casamos-img">
-      <img src="Assets/NosCasamos.jpeg" alt="¡Nos Casamos!" />
-    </div>
-
-<div class="countdown" id="countdown">
-  <div class="countdown-set">
-    <span id="days" class="number">0</span>
-    <small class="label">DÍAS</small>
-  </div>
-  <div class="countdown-colon">:</div>
-  <div class="countdown-set">
-    <span id="hours" class="number">0</span>
-    <small class="label">HORAS</small>
-  </div>
-  <div class="countdown-colon">:</div>
-  <div class="countdown-set">
-    <span id="minutes" class="number">0</span>
-    <small class="label">MINUTOS</small>
-  </div>
-  <div class="countdown-colon">:</div>
-  <div class="countdown-set">
-    <span id="seconds" class="number">0</span>
-    <small class="label">SEGUNDOS</small>
-  </div>
+  <!-- 1) HERO (VIDEO DE PORTADA) -->
+  <section class="hero-video" aria-label="Video de portada">
+    <video id="heroVideo" autoplay muted loop playsinline preload="metadata">
+      <source src="Assets/video web 2-2.mp4" type="video/mp4"/>
+      Tu navegador no soporta videos HTML5.
+    </video>
   </section>
 
-<!-- BLOQUE DE IMAGEN ENTRE DOS SECCIONES -->
-<section class="imagen-entre-secciones">
-  <img src="Assets/CostaRica.jpeg" alt="Charo y John en Costa Rica" />
-</section>
+  <!-- 2) FECHA + ¡NOS CASAMOS! + COUNTDOWN (CREMA) -->
+  <section class="block block--crema encabezado" aria-label="Fecha y anuncio">
+    <img class="blk" src="Assets/Assets Figma/SVG/Fecha.svg" alt="El 25 de abril de 2026 a las 15 hs."/>
+    <img class="blk blk-nos" src="Assets/Assets Figma/SVG/Nos_Casamos.svg" alt="¡Nos Casamos!"/>
 
-  <!-- SECCIÓN INVITACIÓN SOBRE FONDO VERDE -->
-  <section class="invitacion-verde">
-    <p class="invitacion-arriba">Y queremos invitarte.</p>
-    <h2 class="venis">¿Venís?</h2>
-    <p class="invitacion-abajo">Esperamos contar con tu presencia</p>
-    <a href="https://www.form.com" class="btn-rsvp-alt" target="_blank">RSVP</a>
-  </section>
-
-  <!-- SECCIÓN DETALLES -->
-  <section class="detalles">
-    <h2>¿DÓNDE?</h2>
-    <p><strong>Village Praia do Rosa</strong><br />Santa Catarina, Brasil</p>
-    <a href="#" class="btn-outline">Cómo llegar</a>
-
-    <div class="eventos">
-      <div>
-        <strong>Ceremonia</strong>
-        <p>15:00</p>
+    <div id="countdown" class="countdown" aria-label="Cuenta regresiva">
+      <div class="cell">
+        <div id="days" class="num">000</div>
+        <div class="label">DÍAS</div>
       </div>
-      <div>
-        <strong>Festejo</strong>
-        <p>17:00</p>
+      <div class="col">:</div>
+      <div class="cell">
+        <div id="hours" class="num">00</div>
+        <div class="label">HORAS</div>
       </div>
-      <div>
-        <strong>Dress Code</strong>
-        <p>Elegante Sport</p>
+      <div class="col">:</div>
+      <div class="cell">
+        <div id="minutes" class="num">00</div>
+        <div class="label">MINUTOS</div>
+      </div>
+      <div class="col">:</div>
+      <div class="cell">
+        <div id="seconds" class="num">00</div>
+        <div class="label">SEGUNDOS</div>
       </div>
     </div>
   </section>
 
-  <!-- REGALOS -->
-  <section class="regalos">
-    <h2>¿Querés regalarnos?</h2>
-    <p>Lo más importante es que estés. Pero si querés hacernos un regalo, te dejamos esta opción:</p>
-    <a href="#" class="btn">click!</a>
-  </section>
-
-  <!-- EXTRAS -->
-  <section class="extras">
-    <div>
-      <h3>¡Sumá tu canción a nuestra playlist!</h3>
-      <a href="#" class="btn-outline">Spotify</a>
-    </div>
-    <div>
-      <h3>#NosCasamos</h3>
-      <p>Subí tus fotos a Instagram</p>
-      <a href="#" class="btn-outline">Instagram</a>
+  <!-- 3) FOTO ENTRE SECCIONES (anclada 50/50 en la frontera crema/verde) -->
+  <section class="foto-superpuesta" aria-hidden="false">
+    <div class="foto-contenedor">
+      <img class="foto" src="Assets/Assets Figma/SVG/FotoCostaRica.png" alt="Charo y John"/>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>Te esperamos</p>
-    <h1 class="logo-footer">Charo <span>&</span> John</h1>
-    <a href="#" class="btn">Agendanos en tu calendario</a>
-  </footer>
+  <!-- 4) INVITACIÓN / RSVP (VERDE) -->
+  <section class="block block--verde is-rsvp" aria-label="Invitación y RSVP">
+    <img class="blk" src="Assets/Assets Figma/SVG/Y_queremos_invitarte.svg" alt="Y queremos invitarte"/>
+    <img class="blk blk-venis" src="Assets/Assets Figma/SVG/Venis.svg" alt="¿Venís?"/>
+    <img class="blk" src="Assets/Assets Figma/SVG/Te_pedimos_que_nos_confirmes.svg" alt="Por favor, te pedimos que nos confirmes"/>
+    <a class="btn-svg" href="https://forms.gle/s1X48nLDoPxfQ3M7A" target="_blank" rel="noopener">
+      <img src="Assets/Assets Figma/SVG/-Boton+Texto-RSVP.svg" alt="RSVP"/>
+    </a>
+  </section>
+
+  <!-- 5) ¿DÓNDE? (CREMA) -->
+  <section class="block block--crema" aria-label="Dónde">
+    <img class="blk" src="Assets/Assets Figma/SVG/Donde.svg" alt="¿Dónde?"/>
+    <img class="blk" src="Assets/Assets Figma/SVG/Village_Praia_do_Rosa.svg" alt="Village Praia do Rosa"/>
+    <img class="blk" src="Assets/Assets Figma/SVG/Praia_do_Rosa,_Santa_Catarina,_Brasil.svg" alt="Praia do Rosa, Santa Catarina, Brasil"/>
+
+    <img class="mapa" src="Assets/Assets Figma/SVG/Mapa.svg" alt="Mapa"/>
+    <a class="btn-svg" href="https://maps.app.goo.gl/k9UvBZNij3EAXQrW6" target="_blank" rel="noopener">
+      <img src="Assets/Assets Figma/SVG/-Boton+Texto-ComoLlegar.svg" alt="Cómo llegar"/>
+    </a>
+
+    <!-- “Más info (PDF)” abre modal con PDF -->
+    <a href="#" class="blk info-extra-link" data-open="info">
+      <img class="blk info-extra" src="Assets/Assets Figma/SVG/Mas info (PDF).svg" alt="Más info (PDF)"/>
+    </a>
+  </section>
+
+  <!-- 6) CEREMONIA + DRESS CODE (VERDE) -->
+  <section class="block block--verde ceremonia-grid" aria-label="Ceremonia y Dress code">
+    <div class="cer-item">
+      <img class="cer-ico"   src="Assets/Assets Figma/SVG/Icono Ceremonia2.svg" alt="Ícono ceremonia"/>
+      <img class="cer-title" src="Assets/Assets Figma/SVG/Ceremonia.svg" alt="Ceremonia"/>
+      <img class="cer-sub"   src="Assets/Assets Figma/SVG/15_00_HORAS.svg" alt="15:00 horas"/>
+    </div>
+    <div class="cer-item">
+      <img class="cer-ico"   src="Assets/Assets Figma/SVG/Icono_Dresscode.svg" alt="Ícono dress code"/>
+      <img class="cer-title" src="Assets/Assets Figma/SVG/Dress_Code.svg" alt="Dress Code"/>
+      <img class="cer-sub"   src="Assets/Assets Figma/SVG/ELEGANTE SPORT.svg" alt="Elegante Sport"/>
+    </div>
+  </section>
+
+  <!-- 7) REGALOS (CREMA) -->
+  <section class="block block--crema" aria-label="Regalos">
+    <img class="ico-regalo" src="Assets/Assets Figma/SVG/Icono_Regalos.svg" alt="Ícono regalos"/>
+    <img class="blk" src="Assets/Assets Figma/SVG/Lo_mas_importante.svg" alt="Lo más importante para nosotros es que estés presente..."/>
+
+    <!-- Botón unificado que ABRE MODAL de datos bancarios -->
+    <a class="btn-svg" href="#" data-open="banco">
+      <img src="Assets/Assets Figma/SVG/-Boton+Texto-VerDatosBancarios.svg" alt="Ver datos bancarios"/>
+    </a>
+
+    <img class="blk blk-mini gracias-img" src="Assets/Assets Figma/SVG/Gracias.svg" alt="¡Gracias!"/>
+  </section>
+
+  <!-- 10) CIERRE / TE ESPERAMOS (VERDE) -->
+  <section class="block block--verde cierre" aria-label="Cierre">
+    <img class="blk cierre__title" src="Assets/Assets Figma/SVG/Te_esperamos.svg" alt="Te esperamos"/>
+    <img class="logo-final grande cierre__logo" src="Assets/Assets Figma/SVG/Logo_Charoyjohn.png" alt="Logo Charo & John"/>
+    
+    <a
+  class="btn-svg cierre__boton"
+  href="https://calendar.google.com/calendar/u/0/r/eventedit?action=TEMPLATE&text=Casamiento+Charo+y+John&dates=20260425T180000Z/20260426T040000Z&details=Evento+en+Praia+do+Rosa&location=Village%20Praia%20do%20Rosa%2C%20Av.%20Porto%20Novo%2C%201028%20-%20Ibiraquera%2C%20Imbituba%20-%20SC%2C%2088780-000%2C%20Brasil&trp=false"
+  target="_blank"
+  rel="noopener"
+>
+  <img
+    src="Assets/Assets Figma/SVG/-Boton+Texto-Agendanos.svg"
+    alt="Agendanos en tu calendario"
+  />
+</a>
+
+
+
+  </section>
+
+  <!-- ===== MODAL: Datos bancarios (IMG) ===== -->
+  <div id="modal-banco" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Datos bancarios">
+    <div class="modal__backdrop" data-close="true"></div>
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" type="button" aria-label="Cerrar" data-close="true">✕</button>
+
+     <div class="modal__banco-texto">
+      <p>
+        <strong>Pesos / ARS:</strong> Banco Galicia (Arg)<br>
+        <strong>ALIAS:</strong> CharoyJohn<br>
+        <strong>Titular:</strong> John Newkirk
+      </p>
+
+      
+      <i class="fas fa-heart" style="color: rgb(157, 139, 81);"></i>
+
+      <p>
+        <strong>Dólares / USD:</strong> Banco Galicia (Arg)<br>
+        <strong>ALIAS:</strong> CharoyJohnUSD<br>
+        <strong>Titular:</strong> John Newkirk
+      </p>
+
+      <i class="fas fa-heart" style="color: rgb(157, 139, 81);"></i>
+
+      <p>
+        <strong>Dólares / USD:</strong> Venmo (USA)<br>
+        <strong>@charoquintana</strong><br>
+        <strong>Titular:</strong> Maria Rosario Quintana
+      </p>
+    </div>
+
+    </div>
+  </div>
+
+  <!-- ===== MODAL: Más info (PDF) ===== -->
+  <div id="modal-info" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Más información (PDF)">
+    <div class="modal__backdrop" data-close="true"></div>
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" type="button" aria-label="Cerrar" data-close="true">✕</button>
+
+      <!-- PDF embebido; OJO con & en el nombre: usar &amp; en HTML -->
+      <iframe
+        class="modal__doc"
+        src="Assets/Assets Figma/SVG/Charo &amp; John.pdf"
+        title="Más información (PDF)"
+      ></iframe>
+
+      <div class="modal__actions">
+        <a
+          class="modal__download"
+          href="Assets/Assets Figma/SVG/Charo &amp; John.pdf"
+          download="Charo_John.pdf"
+          data-download="info"
+          data-href="Assets/Assets Figma/SVG/Charo &amp; John.pdf"
+          role="button"
+        >Descargar PDF</a>
+
+        <a
+          class="modal__download modal__download--ghost"
+          href="Assets/Assets Figma/SVG/Charo &amp; John.pdf"
+          target="_blank" rel="noopener"
+        >Abrir en nueva pestaña</a>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
